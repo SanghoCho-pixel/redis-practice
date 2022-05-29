@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.tmax.tibero.jdbc.TbDriver
+    url: jdbc:tibero:thin:@220.90.208.132:8629:tibero
+    username: wapl_test2
+    password: wapl_test2
+
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        shoq_sql: true
+
+  redis:
+    host: 192.168.152.34
+    port: 6379
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
